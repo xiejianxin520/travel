@@ -36,9 +36,9 @@ export default {
   watch: {
     keyword() {
       if (this.timer) {
-        clearTimeout(timer)
+        clearTimeout(this.timer)
       }
-      timer = setTimeout(() => {
+      this.timer = setTimeout(() => {
         let lists = [] //定义数组来优化，不然如果下面两个循环push this.keyslist，很繁忙
         for (let key in this.cities) {
           //cites:{'A':[{"id": 56,	"spell": "aba","name": "阿坝"}，{id:2,name:啊亚}]，'B':[{id:1,name:啊尔}，{id:2,name:啊亚}}

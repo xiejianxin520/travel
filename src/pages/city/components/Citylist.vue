@@ -5,7 +5,10 @@
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button"> {{this.$store.state.city}}</div>
+            <div class="button">
+              <!-- {{this.$store.state.city}} -->
+              {{this.currycity}}
+            </div>
           </div>
         </div>
       </div>
@@ -34,6 +37,7 @@
 
 <script>
 import Bscroll from 'better-scroll'
+
 export default {
   name: 'cityList',
   props: {
@@ -41,11 +45,15 @@ export default {
     cities: Object,
     accerindex: String
   },
+  computed: {
+    ...mapState({ currycity: 'city' })
+  },
   methods: {
     cityToStore(city) {
-      this.$store.dispatch('acfun', city)
+      this.mufun(city) //这个mu是直接mutations的方法
       this.$router.push('/')
-    }
+    },
+    ...mapMutations(['mufun'])
   },
   mounted() {
     this.scroll = new Bscroll(this.$refs.wrapper) //滚动
