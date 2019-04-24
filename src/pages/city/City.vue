@@ -35,8 +35,8 @@ export default {
   },
   methods: {
     getcityinfo() {
-      //获取城市的ajax数据
-      axios.get('/static/mock/city.json').then(res => {
+      //获取城市的ajax数据'/static/mock/city.json'
+      axios.get('/api/city.json').then(res => {
         console.log(res.data) //'返回数据结果为'
         const result = res.data
         if (result.ret && result.data) {

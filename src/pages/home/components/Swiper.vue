@@ -1,9 +1,9 @@
 <template>
-  <div class="wrapper" v-if="showswiper">
-    <swiper :options="swiperOption">
+  <div class="wrapper">
+    <swiper :options="swiperOption" v-if="showswiper">
       <!-- slides -->
       <swiper-slide v-for="item in list " :key='item.id'>
-        <img class="swiper-img" :src='item.imgUrl' alt="">
+        <img class="swiper-img" :src='item.imgUrl' />
       </swiper-slide>
 
       <!-- Optional controls -->
@@ -40,6 +40,7 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
+// 带父元素可以强制控制这个类
 .wrapper >>> .swiper-pagination-bullet-active {
   background-color: #fff;
 }

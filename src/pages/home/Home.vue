@@ -42,7 +42,7 @@ export default {
   methods: {
     getHomeInfo() {
       //把当前其他组件练习的city传给get请求
-      axios.get('/static/mock/index.json?city=' + this.city).then(res => {
+      axios.get('/api/index.json?city=' + this.city).then(res => {
         //要用箭头函数，不然axios中this是不存在的
         // console.log(res.data.data)
         const reluct = res.data

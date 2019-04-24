@@ -3,7 +3,7 @@
     <swiper :options="swiperOption">
       <!-- <!分页> -->
       <swiper-slide v-for="(page, index) in pages" :key="index">
-        <div class='icon' v-for="(item, index) in page" :key="index">
+        <div class='icon' v-for="item in page" :key="item.id">
           <div class='icon-img-div'>
             <img class='icon-img-content' :src="item.imgUrl" alt="">
           </div>
