@@ -13,7 +13,6 @@ import citysearch from './components/Search'
 import citylist from './components/Citylist'
 import citycontrol from './components/Citycontrol'
 import axios from 'axios'
-import Axios from 'axios'
 
 export default {
   name: 'city',
