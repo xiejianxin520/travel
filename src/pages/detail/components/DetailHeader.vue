@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="backicon" v-show="showabs">
+    <router-link to="/" tag='div' class="backicon" v-show="showabs">
       <div class="iconfont header-abs-back">&#xe624;</div>
-    </div>
-    <div class="header-fixed" v-show="!showabs" :style="opacityStyle">
+    </router-link>
+    <router-link to='/' tag='div' class="header-fixed" v-show="!showabs" :style="opacityStyle">
       <div class="iconfont header-fixed-back">&#xe624;</div>
       景点详情
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -24,17 +24,21 @@ export default {
   activated() {
     window.addEventListener('scroll', this.handleScroll)
   },
+  deactivated() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
   methods: {
     handleScroll() {
+      console.log('滚动触法')
       const top = document.documentElement.scrollTop
       // console.log(top)
       if (top > 60) {
-        let curryopacity = top / 140;
-        curryopacity = curryopacity > 1 ? 1: curryopacity
+        let curryopacity = top / 140
+        curryopacity = curryopacity > 1 ? 1 : curryopacity
         this.opacityStyle = {
-          opacity:curryopacity
+          opacity: curryopacity
         }
-        this.showabs = false//显示
+        this.showabs = false //显示
       } else {
         this.showabs = true
       }
