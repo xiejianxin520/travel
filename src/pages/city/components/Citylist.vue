@@ -57,8 +57,11 @@ export default {
     ...mapMutations(['mufun'])
   },
   mounted() {
-    this.scroll = new Bscroll(this.$refs.wrapper) //滚动
+    this.scroll = new Bscroll(this.$refs.wrapper, { click: true }) //滚动
   },
+  // mounted() {
+  //   this.scroll = new BScroll(this.$refs.wrapper)
+  // },
   watch: {
     accerindex(accerindex) {
       if (this.accerindex) {

@@ -64,7 +64,7 @@ export default {
     }
   },
   mounted() {
-    this.scroll = new Bscroll(this.$refs.searchcontent) //滚动插件，要加入要滚动DOM插件
+    this.scroll = new Bscroll(this.$refs.searchcontent, { click: true }) //滚动插件，要加入要滚动DOM插件
   }
 }
 </script>
