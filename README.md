@@ -1,3 +1,7 @@
+#分为三大组件开发，分别为home组件，city组件，detail组件
+## home组件 
+## city组件 
+## detail组件
 
 
 # 安装插件以及工具
@@ -38,8 +42,8 @@
  -        <img class="swiper-img" :src="item.imgUrl" alt="">
  -      </swiper-slide>      
  -     <div class="swiper-pagination"  slot="pagination"></div>
- -   </swiper>
- - </div>
+-   </swiper>
+- </div>
 
 4. swiper配置项：
 - swiperOption: {
