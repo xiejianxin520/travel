@@ -1,7 +1,3 @@
-#分为三大组件开发，分别为home组件，city组件，detail组件
-## home组件 
-## city组件 
-## detail组件
 
 
 # 安装插件以及工具
